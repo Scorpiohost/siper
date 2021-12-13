@@ -20,6 +20,8 @@ class CreateBarangTable extends Migration
             $table->string('nama');
             $table->integer('id_jenis')
                 ->unsigned();
+            
+            $table->integer('stok');
 
             $table->foreign('id_jenis')
                 ->references('id')
