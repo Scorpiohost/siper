@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\keuangan;
 
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\keuangan\Keuangan;
 use Illuminate\Http\Request;
@@ -91,5 +92,16 @@ class KeuanganController extends Controller
         Alert::toast('Data Dihapus', 'success');
 
         return redirect(url('/keuangan'));
+    }
+
+    public function masuk()
+    {
+        $barang_in = DB::table('barang_in')
+            ->join('barang', 'barang_in.bcode', '=', 'barang.bcode')
+            ->select('barang_in.*', 'barang.nama');
+
+        $data      = $barang_in->get();
+
+        return view('keuangan.barang_masuk.barang_masuk', ['data' => $data]);
     }
 }

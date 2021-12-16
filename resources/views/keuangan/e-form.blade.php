@@ -18,6 +18,14 @@
                 </a>
             </li>
         </li>
+        <li class="menu-title">Barang</li>
+        <li>
+            <a href="{{ url('keuangan/barang') }}">
+                <x-components.fontawesome icon="menu-icon fa fa-laptop" />
+                Barang Masuk
+            </a>
+        </li>
+    </li>
     </x-sidebar.sidebar>
 @endsection
 

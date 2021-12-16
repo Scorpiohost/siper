@@ -67,7 +67,7 @@ class PabrikController extends Controller
         ]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect(url('/pabrik'));
+        return redirect(url('produksi/pabrik'));
     }
 
     /**
@@ -117,7 +117,7 @@ class PabrikController extends Controller
                 ]);
 
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect('/pabrik');
+        return redirect('produksi/pabrik');
     }
 
     /**
@@ -132,6 +132,6 @@ class PabrikController extends Controller
                     ->delete();
         
         Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('/pabrik');
+        return redirect('produksi/pabrik');
     }
 }

@@ -66,7 +66,7 @@ class BarangController extends Controller
         ]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect(url('/barang'));
+        return redirect(url('gudang/barang'));
     }
 
     public function edit($bcode) 
@@ -98,7 +98,7 @@ class BarangController extends Controller
             ]);
 
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect('/barang');
+        return redirect('gudang/barang');
     }
 
     public function destroy($bcode)
@@ -107,6 +107,6 @@ class BarangController extends Controller
             ->delete();
         
         Alert::toast('Data Dihapus', 'success');
-        return redirect('/barang');
+        return redirect('gudang/barang');
     }
 }

@@ -19,7 +19,16 @@
                             alt="User Avatar">
                     </a>
                     <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i>
+                            {{ Auth::user()->nama }}
+                        </a>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            this.closest('form').submit();"><i class="fa fa-power-off"></i>
+                                {{ __('Log Out') }}
+                            </a>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -34,18 +43,6 @@
                     <div class="page-header float-left">
                         <div class="page-title">
                             <h1>@yield('name')</h1>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-8">
-                    <div class="page-header float-right">
-                        <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Table</a></li>
-                                <li class="active">Data table</li>
-                            </ol>
                         </div>
                     </div>
                 </div>

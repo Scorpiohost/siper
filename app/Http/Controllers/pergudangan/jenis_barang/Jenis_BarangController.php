@@ -33,7 +33,7 @@ class Jenis_BarangController extends Controller
         $jenis_barang->save();
         
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('jenis-barang');
+        return redirect('gudang/jenis-barang');
     }
 
     public function edit($id)
@@ -56,7 +56,7 @@ class Jenis_BarangController extends Controller
         $jenis_barang->save();
 
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect('jenis-barang');
+        return redirect('gudang/jenis-barang');
     }
 
     public function destroy($id)
@@ -65,6 +65,6 @@ class Jenis_BarangController extends Controller
         $jenis_barang->delete();
 
         Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('jenis-barang');
+        return redirect('gudang/jenis-barang');
     }
 }

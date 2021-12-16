@@ -203,7 +203,7 @@ class PenjadwalanController extends Controller
             ]);
         
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect(url('/penjadwalan'));
+        return redirect(url('produksi/penjadwalan'));
     }
 
     /**
@@ -223,7 +223,7 @@ class PenjadwalanController extends Controller
             ->delete();
 
         Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('/penjadwalan');
+        return redirect('produksi/penjadwalan');
 
         //return dump($kodepabrik->kodepabrik);
     }

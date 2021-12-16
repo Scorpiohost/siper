@@ -79,7 +79,7 @@ class Barang_dikirimController extends Controller
         ]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('/barang-dikirim');
+        return redirect('penjualan/barang-dikirim');
     }
 
     /**
@@ -141,7 +141,7 @@ class Barang_dikirimController extends Controller
                         ]); 
         
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect('/barang-dikirim');
+        return redirect('penjualan/barang-dikirim');
         
     }
 

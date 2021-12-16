@@ -12,19 +12,19 @@
     <x-sidebar.sidebar>
         <li class="menu-title">Barang</li>
         <li>
-            <a href="{{ url('barang') }}">
+            <a href="{{ url('gudang/barang') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-laptop" />
-                Dashboard
+                Barang
             </a>
         </li>
         <li>
-            <a href="{{ url('barang-out') }}">
+            <a href="{{ url('gudang/barang-out') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-external-link" />
                 Barang Keluar
             </a>
         </li>
         <li>
-            <a href="{{ url('barang-in') }}">
+            <a href="{{ url('gudang/barang-in') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-external-link" />
                 Barang Masuk
             </a>
@@ -32,7 +32,7 @@
         <li>
         <li class="menu-title">Jenis Barang</li>
         <li class="active">
-            <a href="{{ url('jenis-barang') }}">
+            <a href="{{ url('gudang/jenis-barang') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-table" />
                 Jenis Barang
             </a>
@@ -46,7 +46,7 @@
 @section('content')
     <div class="row">
         <div class="col-12 mb-4 ">
-            <x-components.link link='jenis-barang/tambah'>
+            <x-components.link link='gudang/jenis-barang/tambah'>
                 <x-components.primary_button>
                     Tambah Data
                 </x-components.primary_button>
@@ -61,12 +61,12 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $result->jenis }}</td>
                     <td>
-                        <x-components.link link='jenis-barang/edit/{{ $result->id }}'>
+                        <x-components.link link='gudang/jenis-barang/edit/{{ $result->id }}'>
                             <x-components.primary_button>
                                 Edit
                             </x-components.primary_button>
                         </x-components.link>
-                        <x-components.d_link href="{{ url('jenis-barang/delete/'.$result->id) }}" />
+                        <x-components.d_link href="{{ url('gudang/jenis-barang/delete/'.$result->id) }}" />
                     </td>
                 </tr>
             @endforeach

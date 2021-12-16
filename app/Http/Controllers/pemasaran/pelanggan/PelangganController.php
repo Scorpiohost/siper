@@ -36,7 +36,7 @@ class PelangganController extends Controller
         ]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('/pelanggan');
+        return redirect('penjualan/pelanggan');
     }
 
     public function edit($id)
@@ -62,7 +62,7 @@ class PelangganController extends Controller
         $pelanggan->save();
 
         Alert::toast('Data Berhasil Diubah', 'success');
-        return redirect('/pelanggan');
+        return redirect('penjualan/pelanggan');
     }
 
     Public function destroy($id)
@@ -71,6 +71,6 @@ class PelangganController extends Controller
         $pelanggan->delete();
 
         Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('/pelanggan');
+        return redirect('penjualan/pelanggan');
     }
 }

@@ -12,7 +12,7 @@
     <x-sidebar.sidebar>
         <li class="menu-title">Penjadwalan</li>
         <li class="active">
-            <a href="{{ url('penjadwalan') }}">
+            <a href="{{ url('produksi/penjadwalan') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                 Penjadwalan
             </a>
@@ -20,7 +20,7 @@
         <li>
         <li class="menu-title">Pabrik</li>
         <li>
-            <a href="{{ url('pabrik') }}">
+            <a href="{{ url('produksi/pabrik') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                 Pabrik
             </a>
@@ -34,7 +34,7 @@
 @section('content')
     <div class="row">
         <div class="col-12 mb-4 ">
-            <x-components.link link='penjadwalan/tambah'>
+            <x-components.link link='produksi/penjadwalan/tambah'>
                 <x-components.primary_button>
                     Tambah Data
                 </x-components.primary_button>
@@ -51,12 +51,12 @@
                     <td>{{ $result->pabrik }}</td>
                     <td>{{ $result->estimasi }} Hari</td>
                     <td>
-                        <x-components.link link='penjadwalan/edit/{{ $result->kodeproduksi }}'>
+                        <x-components.link link='produksi/penjadwalan/edit/{{ $result->kodeproduksi }}'>
                             <x-components.primary_button>
                                 Edit
                             </x-components.primary_button>
                         </x-components.link>
-                        <x-components.d_link href="{{ url('penjadwalan/delete/' . $result->kodeproduksi) }}" />
+                        <x-components.d_link href="{{ url('produksi/penjadwalan/delete/' . $result->kodeproduksi) }}" />
                     </td>
                 </tr>
             @endforeach

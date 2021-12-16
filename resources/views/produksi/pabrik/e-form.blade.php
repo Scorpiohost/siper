@@ -22,7 +22,7 @@
     <x-sidebar.sidebar>
         <li class="menu-title">Penjadwalan</li>
         <li>
-            <a href="{{ url('penjadwalan') }}">
+            <a href="{{ url('produksi/penjadwalan') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                 Penjadwalan
             </a>
@@ -30,7 +30,7 @@
         <li>
         <li class="menu-title">Pabrik</li>
         <li class="active">
-            <a href="{{ url('pabrik') }}">
+            <a href="{{ url('produksi/pabrik') }}">
                 <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                 Pabrik
             </a>
@@ -50,7 +50,7 @@
             <x-components.primary_button>
                 Submit
             </x-components.primary_button>
-            <x-components.link link="pabrik">
+            <x-components.link link="produksi/pabrik">
                 <x-components.danger_button type="button">
                     Batal
                 </x-components.danger_button>

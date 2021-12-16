@@ -79,7 +79,7 @@ class Barang_outController extends Controller
             ->update(['stok' => $result]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('/barang-out');
+        return redirect('gudang/barang-out');
 
     }
 }

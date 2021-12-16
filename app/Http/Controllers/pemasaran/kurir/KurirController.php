@@ -47,7 +47,7 @@ class KurirController extends Controller
         $kurir->save();
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('/kurir');
+        return redirect('penjualan/kurir');
     }
 
     /**
@@ -93,7 +93,7 @@ class KurirController extends Controller
         $kurir->save();
 
         Alert::toast('Data Berhasil Diperbarui', 'success');
-        return redirect('/kurir');
+        return redirect('penjualan/kurir');
     }
 
     /**
@@ -108,6 +108,6 @@ class KurirController extends Controller
         $kurir->delete();
 
         Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('/kurir');
+        return redirect('penjualan/kurir');
     }
 }

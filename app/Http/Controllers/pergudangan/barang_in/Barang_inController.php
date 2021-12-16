@@ -79,6 +79,6 @@ class Barang_inController extends Controller
                 ->update(['stok' => $result]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect('/barang-in');
+        return redirect('gudang/barang-in');
     }
 }

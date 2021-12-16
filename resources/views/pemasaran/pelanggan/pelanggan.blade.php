@@ -12,7 +12,7 @@
     <x-sidebar.sidebar>
         <li class="menu-title">Barang Dikirim</li>
             <li>
-                <a href="{{ url('barang-dikirim') }}">
+                <a href="{{ url('penjualan/barang-dikirim') }}">
                     <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                     Barang Dikirim
                 </a>
@@ -21,7 +21,7 @@
 
         <li class="menu-title">Kurir</li>
             <li>
-                <a href="{{ url('kurir') }}">
+                <a href="{{ url('penjualan/kurir') }}">
                     <x-components.fontawesome icon="menu-icon fa fa-laptop" />
                     Kurir
                 </a>
@@ -30,7 +30,7 @@
 
         <li class="menu-title">Pelanggan</li>
             <li class="active">
-                <a href="{{ url('pelanggan') }}">
+                <a href="{{ url('penjualan/pelanggan') }}">
                     <x-components.fontawesome icon="menu-icon fa fa-table" />
                     Pelanggan
                 </a>
@@ -44,7 +44,7 @@
 @section('content')
     <div class="row">
         <div class="col-12 mb-4 ">
-            <x-components.link link='pelanggan/tambah'>
+            <x-components.link link='penjualan/pelanggan/tambah'>
                 <x-components.primary_button>
                     Tambah Data
                 </x-components.primary_button>
@@ -61,12 +61,12 @@
                     <td>{{ $result->alamat }}</td>
                     <td>{{ $result->tlp }}</td>
                     <td>
-                        <x-components.link link='pelanggan/edit/{{ $result->id }}'>
+                        <x-components.link link='penjualan/pelanggan/edit/{{ $result->id }}'>
                             <x-components.primary_button>
                                 Edit
                             </x-components.primary_button>
                         </x-components.link>
-                        <x-components.d_link href="{{ url('pelanggan/delete/' . $result->id) }}" />
+                        <x-components.d_link href="{{ url('penjualan/pelanggan/delete/' . $result->id) }}" />
                     </td>
                 </tr>
             @endforeach
