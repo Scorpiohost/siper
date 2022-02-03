@@ -121,7 +121,7 @@ class PenjadwalanController extends Controller
         ]);
 
         Alert::toast('Data Berhasil Disimpan', 'success');
-        return redirect(url('/penjadwalan'));
+        return redirect(url('produksi/penjadwalan'));
     }
 
     /**

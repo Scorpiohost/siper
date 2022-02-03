@@ -8,6 +8,7 @@ use App\Models\pergudangan\barang\Barang;
 use App\Models\pergudangan\jenis_barang\Jenis_BarangModel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Exception;
 
 class BarangController extends Controller
 {
@@ -103,10 +104,17 @@ class BarangController extends Controller
 
     public function destroy($bcode)
     {
-        Barang::where('bcode', $bcode)
-            ->delete();
+        try {
+            Barang::where('bcode', $bcode)
+                ->delete();
+
+                Alert::toast('Data Dihapus', 'success');
+                return redirect('gudang/barang');
+
+        } catch (Exception) {
+            Alert::toast('Gagal menghapus, data digunakan!', 'error');
+            return redirect('gudang/barang');
+        }
         
-        Alert::toast('Data Dihapus', 'success');
-        return redirect('gudang/barang');
     }
 }

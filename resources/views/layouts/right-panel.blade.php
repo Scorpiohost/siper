@@ -58,8 +58,6 @@
                     <div class="card">
                     </div>
                 </div>
-
-
             </div>
         </div><!-- .animated -->
     </div><!-- .content -->

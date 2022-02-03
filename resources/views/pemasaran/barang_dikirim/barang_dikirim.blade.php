@@ -53,9 +53,10 @@
     </div>
 
     <x-cards.card title="Barang Dikirim">
-        <x-tables.datatables :thead="['Koderesi', 'Tcodeout', 'Pelanggan', 'Kurir', 'Dikirim','Aksi']">
+        <x-tables.datatables :thead="['No','Koderesi', 'Tcodeout', 'Pelanggan', 'Kurir', 'Dikirim','Aksi']">
             @foreach ($data as $result)
                 <tr>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $result->koderesi }}</td>
                     <td>{{ $result->tcodeout }}</td>
                     <td>{{ $result->nama }}</td>

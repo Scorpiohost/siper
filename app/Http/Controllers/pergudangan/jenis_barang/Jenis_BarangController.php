@@ -5,6 +5,7 @@ namespace App\Http\Controllers\pergudangan\jenis_barang;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use App\Models\pergudangan\jenis_barang\Jenis_BarangModel;
+use Exception;
 use Illuminate\Http\Request;
 
 class Jenis_BarangController extends Controller
@@ -61,10 +62,16 @@ class Jenis_BarangController extends Controller
 
     public function destroy($id)
     {
-        $jenis_barang = Jenis_BarangModel::find($id);
-        $jenis_barang->delete();
+        try {
+            $jenis_barang = Jenis_BarangModel::find($id);
+            $jenis_barang->delete();
+    
+            Alert::toast('Data Berhasil Dihapus', 'success');
+            return redirect('gudang/jenis-barang');
 
-        Alert::toast('Data Berhasil Dihapus', 'success');
-        return redirect('gudang/jenis-barang');
+        } catch(Exception) {
+            Alert::toast('Gagal menghapus, data digunakan!', 'error');
+            return redirect('gudang/barang');
+        }
     }
 }

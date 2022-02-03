@@ -76,7 +76,7 @@ Route::middleware(['penjualan'])->group(function () {
     route::post('penjualan/pelanggan/tambah', [Controllers\pemasaran\pelanggan\PelangganController::class, 'store']);
     route::get('penjualan/pelanggan/edit/{id}', [Controllers\pemasaran\pelanggan\PelangganController::class, 'edit']);
     route::post('penjualan/pelanggan/edit/{id}', [Controllers\pemasaran\pelanggan\PelangganController::class, 'update']);
-    route::get('/pelanggan/delete/{id}', [Controllers\pemasaran\pelanggan\PelangganController::class, 'destroy']);
+    route::get('penjualan/pelanggan/delete/{id}', [Controllers\pemasaran\pelanggan\PelangganController::class, 'destroy']);
     
     
     //kurir

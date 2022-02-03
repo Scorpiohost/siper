@@ -54,7 +54,7 @@
                 <select name="Jenis" id="Jenis" class="form-control @error('Jenis') is-invalid @enderror">
                     <option value="">-- Pilih --</option>
                     @foreach ($jenis as $result)
-                        <option value="{{ $kode->id_jenis }}" @if ($kode->id_jenis == $result->id) selected @endif>{{ $result->jenis }}</option>
+                        <option value="{{ $result->id }}" @if ($kode->id_jenis == $result->id) selected @endif>{{ $result->jenis }}</option>
                     @endforeach
                 </select>
             </div>
@@ -68,7 +68,7 @@
             <x-components.primary_button>
                 Submit
             </x-components.primary_button>
-            <x-components.link link="gudang/{{ url('gudang/') }}barang">
+            <x-components.link link="{{ url('gudang/barang') }}">
                 <x-components.danger_button>
                     Batal
                 </x-components.danger_button>
